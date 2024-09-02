@@ -5,12 +5,7 @@ const filterSlice = createSlice({
   initialState: "",
   reducers: {
     setFilter(state, action) {
-      return {
-        ...state,
-        items: state.items.filter((contact) =>
-          contact.name.toLowerCase().includes(action.payload.toLowerCase())
-        ),
-      };
+      return action.payload;
     },
   },
 });
