@@ -7,9 +7,7 @@ import { getFilter } from "../../redux/selectors";
 export default function SearchBox() {
   const dispatch = useDispatch();
   const filter = useSelector(getFilter);
-  console.log(filter);
   const inputId = useId();
-
   const onChange = (evt) => {
     dispatch(setFilter(evt.target.value));
   };
